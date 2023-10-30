@@ -7,6 +7,10 @@ public class Main {
     public static void main(String[] args) {
         try {
             Scanner scanner = new Scanner(System.in);
+
+            System.out.print("Adja meg a nevét: ");
+            String playerName = scanner.nextLine();
+
             int N, numBonusWalls, numPiles;
             do {
                 System.out.print("Adja meg a térkép méretét (6-20 közötti egész szám): ");
@@ -27,7 +31,7 @@ public class Main {
 
                 gameMap.placeHero(hero);
 
-                System.out.println("A hősnek van egy nyila, amit a szörnyek kilövésére használhat.");
+                System.out.println(playerName + ", a hősnek van egy nyila, amit a szörnyek kilövésére használhat.");
                 System.out.println("Nyilak száma: " + hero.getArrows());
 
                 printMap(map);
